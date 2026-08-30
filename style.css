@@ -1,210 +1,362 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TJO BizConnect | Businesses</title>
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <!-- HEADER -->
-    <header>
-
-        <div class="logo">
-            TJO BizConnect
-        </div>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="business.html" class="active">Businesses</a>
-        </nav>
-
-    </header>
-
-
-    <!-- PAGE HEADER -->
-    <section class="page-header">
-
-        <h1>Businesses & Services</h1>
-
-        <p>
-            Browse businesses and service providers listed on
-            TJO BizConnect.
-        </p>
-
-    </section>
-
-
-    <!-- BUSINESS LIST -->
-    <section class="section">
-
-        <h2>Available Businesses</h2>
-
-        <div class="business-container">
-
-
-            <!-- BUSINESS 1 -->
-            <div class="business-card">
-
-                <div class="business-image">
-                    Business Image
-                </div>
-
-                <h3>Business One</h3>
-
-                <p>
-                    <strong>Category:</strong> Restaurant
-                </p>
-
-                <p>
-                    <strong>Location:</strong> Port Moresby
-                </p>
-
-                <p>
-                    A local restaurant providing food and dining
-                    services to customers.
-                </p>
-
-                <a href="#" class="view-button">
-                    View Details
-                </a>
-
-            </div>
-
-
-            <!-- BUSINESS 2 -->
-            <div class="business-card">
-
-                <div class="business-image">
-                    Business Image
-                </div>
-
-                <h3>Business Two</h3>
-
-                <p>
-                    <strong>Category:</strong> ICT
-                </p>
-
-                <p>
-                    <strong>Location:</strong> Lae
-                </p>
-
-                <p>
-                    An ICT business providing basic technology
-                    and digital services.
-                </p>
-
-                <a href="#" class="view-button">
-                    View Details
-                </a>
-
-            </div>
-
-
-            <!-- BUSINESS 3 -->
-            <div class="business-card">
-
-                <div class="business-image">
-                    Business Image
-                </div>
-
-                <h3>Business Three</h3>
-
-                <p>
-                    <strong>Category:</strong> Transport
-                </p>
-
-                <p>
-                    <strong>Location:</strong> Mount Hagen
-                </p>
-
-                <p>
-                    A local transport service providing transportation
-                    services to customers.
-                </p>
-
-                <a href="#" class="view-button">
-                    View Details
-                </a>
-
-            </div>
-
-
-            <!-- BUSINESS 4 -->
-            <div class="business-card">
-
-                <div class="business-image">
-                    Business Image
-                </div>
-
-                <h3>Business Four</h3>
-
-                <p>
-                    <strong>Category:</strong> Shop
-                </p>
-
-                <p>
-                    <strong>Location:</strong> Port Moresby
-                </p>
-
-                <p>
-                    A local retail business providing products
-                    to customers.
-                </p>
-
-                <a href="#" class="view-button">
-                    View Details
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- HOW TO GET STARTED -->
-    <section class="section light-section">
-
-        <h2>How to Get Started</h2>
-
-        <p>
-            Browse the available business categories and select
-            a business to learn more about its location, services,
-            and contact information.
-        </p>
-
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
-
-        <h3>TJO BizConnect</h3>
-
-        <p>
-            Connecting people with local businesses and services
-            in Papua New Guinea.
-        </p>
-
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="business.html">Businesses</a>
-        </div>
-
-        <p class="copyright">
-            © 2026 TJO BizConnect. All Rights Reserved.
-        </p>
-
-    </footer>
-
-</body>
-</html>
+/* TJO BizConnect - Global Stylesheet */
+
+:root {
+  --brand: #0b5c3f;
+  --brand-dark: #084430;
+  --accent: #f0a500;
+  --text: #22282c;
+  --muted: #5b6770;
+  --light: #f5f7f6;
+  --border: #e0e5e2;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px 40px;
+  background-color: var(--brand);
+  color: var(--white);
+}
+
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+header nav {
+  display: flex;
+  gap: 10px;
+}
+
+header nav a {
+  padding: 8px 14px;
+  border-radius: 4px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header nav a:hover {
+  background-color: var(--brand-dark);
+}
+
+header nav a.active {
+  background-color: var(--accent);
+  color: var(--brand-dark);
+}
+
+/* HERO */
+
+.hero {
+  padding: 70px 20px;
+  text-align: center;
+  background-color: var(--brand-dark);
+  color: var(--white);
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #d9e5df;
+}
+
+.search-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 360px;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-box button {
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--brand-dark);
+  background-color: var(--accent);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #d99400;
+}
+
+/* PAGE HEADER (inner pages) */
+
+.page-header {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: var(--brand);
+  color: var(--white);
+}
+
+.page-header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #d9e5df;
+}
+
+/* SECTIONS */
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 55px 20px;
+}
+
+.section h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.section > p {
+  max-width: 720px;
+  margin: 0 auto 10px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.section-intro {
+  margin-bottom: 30px;
+}
+
+.light-section {
+  max-width: none;
+  background-color: var(--light);
+}
+
+.light-section h2,
+.light-section > p {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featured {
+  max-width: none;
+  background-color: var(--light);
+}
+
+/* CATEGORIES */
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.category {
+  padding: 24px;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  border-top: 4px solid var(--brand);
+  text-align: center;
+}
+
+.category h3 {
+  margin-bottom: 8px;
+  color: var(--brand);
+}
+
+.category p {
+  color: var(--muted);
+}
+
+/* BUSINESS CARDS */
+
+.business-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 30px auto 0;
+}
+
+.business-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.business-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin-bottom: 15px;
+  background-color: var(--light);
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.business-card h3 {
+  margin-bottom: 10px;
+  color: var(--brand);
+}
+
+.business-card p {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.view-button {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: var(--brand);
+  border-radius: 4px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.view-button:hover {
+  background-color: var(--brand-dark);
+}
+
+/* BRAND PROMISES */
+
+.promise-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.promise {
+  padding: 24px;
+  background-color: var(--light);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.promise h3 {
+  margin-bottom: 8px;
+  color: var(--brand);
+}
+
+.promise p {
+  color: var(--muted);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 45px 20px 30px;
+  background-color: var(--brand-dark);
+  color: var(--white);
+  text-align: center;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+}
+
+footer p {
+  max-width: 560px;
+  margin: 0 auto;
+  color: #cddbd4;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.copyright {
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  color: #b7c6bf;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    padding: 16px 20px;
+  }
+
+  .hero {
+    padding: 50px 18px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .search-box input {
+    max-width: none;
+  }
+}
